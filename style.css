@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+.day-mode {
+    background-color: #F9F9F9;
+    color: #333;
+}
+
+.night-mode {
+    background-color: #1a1a1a;
+    /* Dark background color for night mode */
+    color: #fff;
+    /* Light text color for night mode */
+}
+
+header {
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 0 250px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+    background-color: #F9F9F9;
+}
+
+header a {
+    text-decoration: none;
+}
+
+.night-mode header {
+    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.1);
+    /* Light gray shadow for night mode */
+    background-color: #1a1a1a;
+}
+
+
+.logo {
+    font-size: 64px;
+    font-weight: bold;
+    color: inherit;
+}
+
+nav {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: 500;
+    color: inherit;
+}
+
+.login-btn {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #ccc;
+    border: 1px solid #000;
+    border-radius: 4px;
+}
+
+.login-btn:hover {
+    background-color: #999;
+    transition: background-color 0.3s ease;
+}
+
+.sticky-header {
+    position: sticky;
+    top: 0;
+}
+
+footer {
+    margin-top: 100px;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    background-color: #888888;
+}

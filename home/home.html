@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="home.css">
+    <script src="../script.js"></script>
+    <title>AlbumArt</title>
+</head>
+
+<body>
+    <header class="sticky-header">
+        <a class="logo" href="../home/home.html">Web Logo</a>
+        <nav>
+            <a href="../gallery/gallery.html">gallery</a>
+            <a href="../genres/genres.html">genres</a>
+            <a href="../about/about.html">about</a>
+            <a href="../login/login.html" class="login-btn">log in</a>
+        </nav>
+        <button id="mode-toggle">Toggle Mode</button>
+    </header>
+    <div class="content">
+        <div class="search-container">
+            <div class="search-bar">
+                <input type="text" placeholder="Search..." />
+                <div class="search-icon">
+                    <img src="img/search-icon.png" alt="Search Icon">
+                </div>
+            </div>
+            <div class="dropdown">
+                <select>
+                    <option value="artist">artist</option>
+                    <option value="album">album</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="top-albums">
+            <p>top albums by
+                <select>
+                    <option value="week">week</option>
+                    <option value="month">month</option>
+                    <option value="year">year</option>
+                    <option value="all-time">all time</option>
+                </select>
+            </p>
+        </div>
+
+        <div class="image-grid">
+            <a href="#"><img src="./img/ForLovers.png" alt="For Lovers"></a>
+            <a href="#"><img src="./img/InTheCourtOfTheCrimsonKing.png" alt="In The Court Of The Crimson King"></a>
+            <a href="#"><img src="./img/TheFirstGlassBeachAlbum.png" alt="The First Glass Beach Album"></a>
+            <a href="#"><img src="./img/DragonNewWarmMountainIBelieveInYou.png"
+                    alt="Dragon New Warm Mountain I Believe In You"></a>
+            <a href="#"><img src="./img/Cross.png" alt="Cross"></a>
+            <a href="#"><img src="./img/YankeeHotelFoxtrot.png" alt="Yankee Hotel Foxtrot"></a>
+            <a href="#"><img src="./img/FallBeKind.png" alt="Fall Be Kind"></a>
+            <a href="#"><img src="./img/Lamparetes.png" alt="Lamparetes"></a>
+            <a href="#"><img src="./img/ICareBecauseYouDo.png" alt="I Care Because You Do"></a>
+            <a href="#"><img src="./img/SlowRiotForZeroNewKanada.png" alt="Slow Riot For Zero New Kanada"></a>
+        </div>
+
+
+
+    </div>
+
+    <footer class="web-footer">
+        <div class="copyright">
+            <p>&copy; 2024 | AlbumArt | All rights reserved</p>
+        </div>
+        <div class="cookies">
+            <p>This website uses cookies to ensure you get the best experience on our website</p>
+        </div>
+    </footer>
+</body>
+
+</html>

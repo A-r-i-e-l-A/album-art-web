@@ -1,0 +1,42 @@
+.genres-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.genres-container h1 {
+    font-size: 48px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.genre {
+    margin-bottom: 24px;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: -20px;
+}
+
+.description {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.sub-genres {
+    margin-bottom: 75px;
+}
+
+.sub-genres p {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
+    margin-right: 50px;
+    display: inline-block;
+}
+
+.sub-genres p:last-child {
+    margin-right: 0;
+}
