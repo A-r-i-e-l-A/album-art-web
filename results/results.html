@@ -41,15 +41,15 @@
             </div>
         </div>
 
-        <div class="album-grid">
+        <div class="album-grid" id="albumGrid">
             <div class="album-cell">
                 <a href="#" class="album-link">
                     <img src="img/american football (1).png" alt="american football (1)" class="album-image">
                 </a>
                 <div class="album-details">
                     <div class="album-name">american football</div>
-                    <div class="artist-name">american football</div>
-                    <div class="year">(1999)
+                    <div class="album-artist">american football</div>
+                    <div class="album-year">(1999)
                     </div>
                     <div class="subgenres">midwest emo - indie rock - math rock</div>
                 </div>
@@ -61,8 +61,8 @@
                 </a>
                 <div class="album-details">
                     <div class="album-name">american football</div>
-                    <div class="artist-name">american football</div>
-                    <div class="year">(2016)</div>
+                    <div class="album-artist">american football</div>
+                    <div class="album-year">(2016)</div>
                     <div class="subgenres">emo - indie rock</div>
                 </div>
             </div>
@@ -73,12 +73,59 @@
                 </a>
                 <div class="album-details">
                     <div class="album-name">american football</div>
-                    <div class="artist-name">american football</div>
-                    <div class="year">(2019)</div>
+                    <div class="album-artist">american football</div>
+                    <div class="album-year">(2019)</div>
                     <div class="subgenres">emo - indie rock - dream pop</div>
                 </div>
             </div>
         </div>
+
+        <div class="artist-grid" id="artistGrid">
+            <div class="artist-cell">
+                <a href="#" class="artist-link">
+                    <img src="img/TheMothersOfInvention.png" class="artist-image">
+                </a>
+                <div class="artist-details">
+                    <div class="artist-first-row">
+                        <div class="artist-name">The Mothers of Invention</div>
+                        <div class="artist-year">(1964)</div>
+                    </div>
+                    <div class="pseudonym">The Mothers / Frank Zappa and the Mothers / The Soul Giants</div>
+                    <div class="description">American rock band from California formed in 1964. Their work is marked
+                        by the use of sonic experimentation, innovative album art, and elaborate live shows.</div>
+                </div>
+            </div>
+
+            <div class="artist-cell">
+                <a href="#" class="artist-link">
+                    <img src="img/MotherMother.png" class="artist-image">
+                </a>
+                <div class="artist-details">
+                    <div class="artist-first-row">
+                        <div class="artist-name">Mother Mother</div>
+                        <div class="artist-year">(2005)</div>
+                    </div>
+                    <div class="pseudonym">Mother</div>
+                    <div class="description">Canadian indie rock band based on Quadra Island.</div>
+                </div>
+            </div>
+
+            <div class="artist-cell">
+                <a href="#" class="artist-link">
+                    <img src="img/TheMothers.png" class="artist-image">
+                </a>
+                <div class="artist-details">
+                    <div class="artist-first-row">
+                        <div class="artist-name">The Mothers</div>
+                        <div class="artist-year">(1990)</div>
+                    </div>
+                    <div class="pseudonym"></div>
+                    <div class="description">British alternative rock band.</div>
+                </div>
+            </div>
+        </div>
+
+
         <div class="page-changer">
             <span>&lt;</span>
             <span class="current-page">1</span>
@@ -97,5 +144,32 @@
         </div>
     </footer>
 </body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const dropdown = document.querySelector('select');
+        const albumGrid = document.getElementById('albumGrid');
+        const artistGrid = document.getElementById('artistGrid');
+
+        // Initial setup based on the default value of the dropdown
+        toggleGrids();
+
+        // Add an event listener to the dropdown
+        dropdown.addEventListener('change', toggleGrids);
+
+        // Function to toggle visibility based on the dropdown value
+        function toggleGrids() {
+            const selectedValue = dropdown.value;
+
+            if (selectedValue === 'album') {
+                albumGrid.style.display = 'grid';
+                artistGrid.style.display = 'none';
+            } else if (selectedValue === 'artist') {
+                albumGrid.style.display = 'none';
+                artistGrid.style.display = 'grid';
+            }
+        }
+    });
+</script>
 
 </html>

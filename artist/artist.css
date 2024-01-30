@@ -1,0 +1,145 @@
+.content {
+    max-width: 1520px;
+    margin: auto;
+}
+
+.artist-information {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 100px 0;
+}
+
+.image-div {
+    width: 500px;
+    height: 500px;
+    margin-right: 100px;
+}
+
+.artist-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.artist-details {
+    max-width: 920px;
+}
+
+.artist-name {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.pseudonyms {
+    font-size: 42px;
+    color: #999999;
+}
+
+.birth-date {
+    font-size: 36px;
+    margin: 50px 0;
+}
+
+.artist-description {
+    font-size: 32px;
+}
+
+.releases-info {
+    display: flex;
+    align-content: center;
+}
+
+.releases-title {
+    font-size: 32px;
+    font-weight: 500;
+    flex: 50%;
+}
+
+.order-by {
+    flex: 50%;
+    display: flex;
+    font-size: 28px;
+    align-items: center;
+}
+
+.order-by-text {
+    margin: 0;
+}
+
+.dropdown {
+    margin-left: 10px;
+}
+
+.dropdown select {
+    font-size: 24px;
+    height: 50px;
+    padding: 0 10px;
+    border: 1px solid #000;
+    background-color: #D9D9D9;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+
+.releases-grid {
+    margin: 50px auto;
+    width: 1000px;
+    display: grid;
+    gap: 20px 50px;
+}
+
+.release-cell {
+    display: flex;
+    align-items: center;
+}
+
+.release-image {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.release-details {
+    max-width: 760px;
+}
+
+.release-name,
+.year,
+.subgenres {
+    font-size: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.release-name {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subgenres {
+    margin-top: 50px;
+}
+
+.show-more {
+    width: fit-content;
+    margin: auto;
+    display: block;
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: #333;
+}
+
+.show-more:hover {
+    text-decoration: underline;
+}

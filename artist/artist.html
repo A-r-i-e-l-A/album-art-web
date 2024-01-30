@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="artist.css">
+    <script src="../script.js"></script>
+    <title>Artist</title>
+</head>
+
+<body>
+    <header class="sticky-header">
+        <a class="logo" href="../home/home.html">Web Logo</a>
+        <nav>
+            <a href="../gallery/gallery.html">gallery</a>
+            <a href="../genres/genres.html">genres</a>
+            <a href="../about/about.html">about</a>
+            <a href="../login/login.html" class="login-btn">log in</a>
+        </nav>
+        <button id="mode-toggle">Toggle Mode</button>
+    </header>
+    <div class="content">
+        <div class="artist-information">
+            <div class="image-div">
+                <img src="img/main.png" alt="Album Image" class="artist-image">
+            </div>
+
+            <div class="artist-details">
+                <div class="artist-name">Brian Patrick Carrol</div>
+                <div class="pseudonyms">Buckethead</div>
+                <div class="birth-date">May 13, 1969</div>
+                <div class="artist-description">American guitarist, songwriter, and multi-instrumentalist. His music
+                    spans several genres, including progressive metal, funk, blues, bluegrass, ambient, and avant-garde
+                    music. </div>
+            </div>
+        </div>
+
+        <div class="artist-releases">
+            <div class="releases-info">
+                <p class="releases-title">releases</p>
+                <div class="order-by">
+                    <p class="order-by-text">order by:</p>
+                    <div class="dropdown">
+                        <select>
+                            <option value="popularity">popularity</option>
+                            <option value="date">date</option>
+                            <option value="alphabetically">alphabetically</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="releases-grid">
+                <div class="release-cell">
+                    <a href="#" class="release-link">
+                        <img src="img/release1.png" alt="release1" class="release-image">
+                    </a>
+                    <div class="release-details">
+                        <div class="release-name">Bucketheadland </div>
+                        <div class="year">(1992) </div>
+                        <div class="subgenres">experimental rock - avant-garde - funk metal</div>
+                    </div>
+                </div>
+                <div class="release-cell">
+                    <a href="#" class="release-link">
+                        <img src="img/release2.png" alt="release1" class="release-image">
+                    </a>
+                    <div class="release-details">
+                        <div class="release-name">Crime Slunk Scene</div>
+                        <div class="year">(2006) </div>
+                        <div class="subgenres">hard rock - avant-garde - funk metal</div>
+                    </div>
+                </div>
+                <div class="release-cell">
+                    <a href="#" class="release-link">
+                        <img src="img/release3.png" alt="release1" class="release-image">
+                    </a>
+                    <div class="release-details">
+                        <div class="release-name">Population Override</div>
+                        <div class="year">(2004) </div>
+                        <div class="subgenres">progressive rock - blues rock</div>
+                    </div>
+                </div>
+                <div class="release-cell">
+                    <a href="#" class="release-link">
+                        <img src="img/release4.png" alt="release1" class="release-image">
+                    </a>
+                    <div class="release-details">
+                        <div class="release-name">Electric Tears</div>
+                        <div class="year">(2002) </div>
+                        <div class="subgenres">ambient - new age - blues - jazz</div>
+                    </div>
+                </div>
+                <div class="release-cell">
+                    <a href="#" class="release-link">
+                        <img src="img/release5.png" alt="release1" class="release-image">
+                    </a>
+                    <div class="release-details">
+                        <div class="release-name">Electric Sea</div>
+                        <div class="year">(2012) </div>
+                        <div class="subgenres">ambient - classical - folk</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="show-more">show more</button>
+    </div>
+
+    <footer class="web-footer">
+        <div class="copyright">
+            <p>&copy; 2024 | AlbumArt | All rights reserved</p>
+        </div>
+        <div class="cookies">
+            <p>This website uses cookies to ensure you get the best experience on our website</p>
+        </div>
+    </footer>
+</body>
+
+</html>

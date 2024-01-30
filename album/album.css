@@ -1,0 +1,59 @@
+.content {
+    max-width: 1520px;
+    margin: auto;
+}
+
+.album-information {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 100px 0;
+}
+
+.album-image {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    margin-right: 100px;
+}
+
+.album-details {
+    max-width: 920px;
+}
+
+.album-name {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.artist-name {
+    font-size: 48px;
+}
+
+.release-date,
+.genres {
+    font-size: 36px;
+    margin-top: 50px;
+}
+
+.gallery-title {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+}
+
+.gallery-image {
+    width: 300px;
+    height: 300px;
+}
+
+.gallery-details {
+    font-size: 24px;
+    font-weight: 500;
+}

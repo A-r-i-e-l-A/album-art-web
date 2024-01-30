@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="gallery.css">
     <script src="../script.js"></script>
+    <script src="gallery.js" defer></script>
     <title>gallery</title>
 </head>
 
@@ -27,7 +28,6 @@
             <div class="option-dropdown">
                 <label for="show">show:</label>
                 <select id="show" name="show">
-                    <option value="2">2</option>
                     <option value="4">4</option>
                     <option value="8" selected>8</option>
                     <option value="16">16</option>
@@ -64,7 +64,9 @@
 
         <div class="album-grid">
             <div class="album-cell">
-                <img src="img/ToBeKind.png" alt="To Be Kind" class="album-image">
+                <a href="#" class="album-link">
+                    <img src="img/ToBeKind.png" alt="To Be Kind" class="album-image">
+                </a>
                 <div class="album-details">
                     <div class="album-name">To Be Kind</div>
                     <div class="artist-name">Swans</div>
@@ -74,7 +76,9 @@
             </div>
 
             <div class="album-cell">
-                <img src="img/MerriweatherPostPavilion.png" alt="Merriweather Post Pavilion" class="album-image">
+                <a href="#" class="album-link">
+                    <img src="img/MerriweatherPostPavilion.png" alt="Merriweather Post Pavilion" class="album-image">
+                </a>
                 <div class="album-details">
                     <div class="album-name">Merriweather Post Pavilion</div>
                     <div class="artist-name">Animal Collective</div>
@@ -84,7 +88,9 @@
             </div>
 
             <div class="album-cell">
-                <img src="img/YouWontGetWhatYouWant.png" alt="You Won't Get What You Want" class="album-image">
+                <a href="#" class="album-link">
+                    <img src="img/YouWontGetWhatYouWant.png" alt="You Won't Get What You Want" class="album-image">
+                </a>
                 <div class="album-details">
                     <div class="album-name">You Won't Get What You Want</div>
                     <div class="artist-name">Daughters</div>
@@ -94,7 +100,10 @@
             </div>
 
             <div class="album-cell">
-                <img src="img/MusicHasTheRightToChildren.png" alt="Music Has the Right to Children" class="album-image">
+                <a href="#" class="album-link">
+                    <img src="img/MusicHasTheRightToChildren.png" alt="Music Has the Right to Children"
+                        class="album-image">
+                </a>
                 <div class="album-details">
                     <div class="album-name">Music Has the Right to Children</div>
                     <div class="artist-name">Boards of Canada</div>
@@ -104,7 +113,9 @@
             </div>
 
             <div class="album-cell">
-                <img src="img/loveless.png" alt="loveless" class="album-image">
+                <a href="#" class="album-link">
+                    <img src="img/loveless.png" alt="loveless" class="album-image">
+                </a>
                 <div class="album-details">
                     <div class="album-name">loveless</div>
                     <div class="artist-name">my bloody valentine</div>
@@ -114,7 +125,9 @@
             </div>
 
             <div class="album-cell">
-                <img src="img/VelocityDesignComfort.png" alt="velocity : design : comfort" class="album-image">
+                <a href="#" class="album-link">
+                    <img src="img/VelocityDesignComfort.png" alt="velocity : design : comfort" class="album-image">
+                </a>
                 <div class="album-details">
                     <div class="album-name">velocity : design : comfort</div>
                     <div class="artist-name">Sweet Trip</div>
@@ -124,7 +137,9 @@
             </div>
 
             <div class="album-cell">
-                <img src="img/WereOnlyInItForTheMoney.png" alt="We're Only in It for the Money" class="album-image">
+                <a href="#" class="album-link">
+                    <img src="img/WereOnlyInItForTheMoney.png" alt="We're Only in It for the Money" class="album-image">
+                </a>
                 <div class="album-details">
                     <div class="album-name">We're Only in It for the Money</div>
                     <div class="artist-name">The Mothers of Invention</div>
@@ -134,7 +149,9 @@
             </div>
 
             <div class="album-cell">
-                <img src="img/98.12.28男達の別れ.png" alt="98.12.28 男達の別れ" class="album-image">
+                <a href="#" class="album-link">
+                    <img src="img/98.12.28男達の別れ.png" alt="98.12.28 男達の別れ" class="album-image">
+                </a>
                 <div class="album-details">
                     <div class="album-name">98.12.28 男達の別れ</div>
                     <div class="artist-name">Fishmans</div>
@@ -144,7 +161,7 @@
             </div>
 
         </div>
-
+        <div class="page-changer"></div>
     </div>
 
     <footer class="web-footer">
@@ -156,40 +173,5 @@
         </div>
     </footer>
 </body>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        // Get the checkbox, album grid, and album images
-        const checkbox = document.getElementById('hide-info');
-        const albumGrid = document.querySelector('.album-grid');
-        const albumImages = document.querySelectorAll('.album-image');
-        const content = document.querySelector('.content');
-
-        // Add an event listener to the checkbox
-        checkbox.addEventListener('change', function () {
-            // Toggle the "hide-details" class on the album grid
-            albumGrid.classList.toggle('hide-details', checkbox.checked);
-
-            // Change the number of columns, image size, and gap based on checkbox status
-            if (checkbox.checked) {
-                albumGrid.style.gridTemplateColumns = 'repeat(4, 1fr)';
-                albumImages.forEach(image => {
-                    image.style.width = '400px';
-                    image.style.height = '400px';
-                });
-                albumGrid.style.gap = '20px 0';
-                content.style.maxWidth = '1660px';
-            } else {
-                albumGrid.style.gridTemplateColumns = 'repeat(2, 1fr)';
-                albumImages.forEach(image => {
-                    image.style.width = '300px';
-                    image.style.height = '300px';
-                });
-                albumGrid.style.gap = '20px 50px';
-                content.style.maxWidth = '1400px';
-            }
-        });
-    });
-
-</script>
 
 </html>
