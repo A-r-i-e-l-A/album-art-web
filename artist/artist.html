@@ -18,10 +18,17 @@
             <a href="../genres/genres.html">genres</a>
             <a href="../about/about.html">about</a>
             <a href="../login/login.html" class="login-btn">log in</a>
+            <div id="mode-toggle" class="mode-toggle">
+                <img src="../img-global/sun-solid.svg" alt="Sun Icon" id="sun-icon">
+                <img src="../img-global/moon-solid.svg" alt="Moon Icon" id="moon-icon">
+            </div>
         </nav>
-        <button id="mode-toggle">Toggle Mode</button>
     </header>
     <div class="content">
+        <div class="edit-div">
+            <a href="edit.html" class="edit-info">edit info</a>
+        </div>
+
         <div class="artist-information">
             <div class="image-div">
                 <img src="img/main.png" alt="Album Image" class="artist-image">
@@ -56,7 +63,7 @@
 
             <div class="releases-grid">
                 <div class="release-cell">
-                    <a href="#" class="release-link">
+                    <a href="../album/album.html" class="release-link">
                         <img src="img/release1.png" alt="release1" class="release-image">
                     </a>
                     <div class="release-details">
@@ -66,7 +73,7 @@
                     </div>
                 </div>
                 <div class="release-cell">
-                    <a href="#" class="release-link">
+                    <a href="../album/album.html" class="release-link">
                         <img src="img/release2.png" alt="release1" class="release-image">
                     </a>
                     <div class="release-details">
@@ -76,7 +83,7 @@
                     </div>
                 </div>
                 <div class="release-cell">
-                    <a href="#" class="release-link">
+                    <a href="../album/album.html" class="release-link">
                         <img src="img/release3.png" alt="release1" class="release-image">
                     </a>
                     <div class="release-details">
@@ -86,7 +93,7 @@
                     </div>
                 </div>
                 <div class="release-cell">
-                    <a href="#" class="release-link">
+                    <a href="../album/album.html" class="release-link">
                         <img src="img/release4.png" alt="release1" class="release-image">
                     </a>
                     <div class="release-details">
@@ -96,7 +103,7 @@
                     </div>
                 </div>
                 <div class="release-cell">
-                    <a href="#" class="release-link">
+                    <a href="../album/album.html" class="release-link">
                         <img src="img/release5.png" alt="release1" class="release-image">
                     </a>
                     <div class="release-details">
@@ -120,5 +127,33 @@
         </div>
     </footer>
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Retrieve artist information from localStorage
+        const artistName = localStorage.getItem('editedArtistName');
+        const pseudonyms = localStorage.getItem('editedPseudonyms');
+        const birthDate = localStorage.getItem('editedBirthDate');
+        const artistDescription = localStorage.getItem('editedArtistDescription');
+        const artistImage = localStorage.getItem('editedArtistImage');
+
+        // Populate HTML elements with artist information
+        const artistNameElement = document.getElementById('artist-name');
+        const pseudonymsElement = document.getElementById('pseudonyms');
+        const birthDateElement = document.getElementById('birth-date');
+        const artistDescriptionElement = document.getElementById('artist-description');
+        const artistImageElement = document.getElementById('artist-image');
+
+        artistNameElement.textContent = artistName || 'Artist Name';
+        pseudonymsElement.textContent = pseudonyms || 'Pseudonyms';
+        birthDateElement.textContent = birthDate || 'Birth Date';
+        artistDescriptionElement.textContent = artistDescription || 'Artist Description';
+
+        // Set image source if available
+        if (artistImage) {
+            artistImageElement.src = artistImage;
+        }
+    });
+
+</script>
 
 </html>

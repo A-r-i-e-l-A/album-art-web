@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="edit.css">
+    <script src="../script.js"></script>
+    <title>Edit Album</title>
+</head>
+
+<body>
+    <header class="sticky-header">
+        <a class="logo" href="../home/home.html">Web Logo</a>
+        <nav>
+            <a href="../gallery/gallery.html">gallery</a>
+            <a href="../genres/genres.html">genres</a>
+            <a href="../about/about.html">about</a>
+            <a href="../login/login.html" class="login-btn">log in</a>
+            <div id="mode-toggle" class="mode-toggle">
+                <img src="../img-global/sun-solid.svg" alt="Sun Icon" id="sun-icon">
+                <img src="../img-global/moon-solid.svg" alt="Moon Icon" id="moon-icon">
+            </div>
+        </nav>
+    </header>
+
+    <div class="content">
+        <div class="edit-container">
+            <div class="edit-header">
+                <div class="edit-title">Edit Album</div>
+                <button id="save-changes-btn">Save Changes</button>
+            </div>
+
+            <div class="edit-content">
+                <div class="edit-image-container">
+                    <div class="edit-image">
+                        <!-- Display uploaded image or placeholder -->
+                        <!-- You can replace the src attribute with the actual image source -->
+                        <img id="edit-image-preview" src="">
+                        <span class="add-image-placeholder">Add Image</span>
+                    </div>
+                    <input type="file" id="edit-image" accept="image/*">
+                </div>
+
+                <div class="edit-rows">
+                    <div class="edit-row">
+                        <input type="text" id="edit-name" placeholder="album name">
+                    </div>
+
+                    <div class="edit-row">
+                        <input type="text" id="edit-artist" placeholder="artist name">
+                    </div>
+
+                    <div class="edit-row">
+                        <input type="text" id="edit-date" placeholder="release date">
+                    </div>
+
+                    <div class="edit-row">
+                        <input type="text" id="edit-genres" placeholder="genres">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="web-footer">
+        <div class="copyright">
+            <p>&copy; 2024 | AlbumArt | All rights reserved</p>
+        </div>
+        <div class="cookies">
+            <p>This website uses cookies to ensure you get the best experience on our website</p>
+        </div>
+    </footer>
+
+    <script src="edit.js" defer></script>
+</body>
+
+</html>
